@@ -7,8 +7,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "Film.h"
 
+@interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic) IBOutlet UITableView* tableView;
+@property (nonatomic) NSArray<Film*> *films;
 
 @end
 

@@ -17,6 +17,9 @@
 		3034697326BB441800B3FDD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3034697226BB441800B3FDD2 /* main.m */; };
 		3034697D26BB441800B3FDD2 /* WarStarsBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3034697C26BB441800B3FDD2 /* WarStarsBrowserTests.m */; };
 		3034698826BB441900B3FDD2 /* WarStarsBrowserUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3034698726BB441900B3FDD2 /* WarStarsBrowserUITests.m */; };
+		3034699826BB4D9B00B3FDD2 /* NSURLSessionService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3034699726BB4D9B00B3FDD2 /* NSURLSessionService.m */; };
+		3034699B26BB51AF00B3FDD2 /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = 3034699A26BB51AF00B3FDD2 /* Film.m */; };
+		3058E65E26BCA1EF009DE75A /* ServiceLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3058E65D26BCA1EF009DE75A /* ServiceLocator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,13 @@
 		3034698326BB441900B3FDD2 /* WarStarsBrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WarStarsBrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3034698726BB441900B3FDD2 /* WarStarsBrowserUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WarStarsBrowserUITests.m; sourceTree = "<group>"; };
 		3034698926BB441900B3FDD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3034699526BB45D300B3FDD2 /* NetworkService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkService.h; sourceTree = "<group>"; };
+		3034699626BB4D9B00B3FDD2 /* NSURLSessionService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSURLSessionService.h; sourceTree = "<group>"; };
+		3034699726BB4D9B00B3FDD2 /* NSURLSessionService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSURLSessionService.m; sourceTree = "<group>"; };
+		3034699926BB51AF00B3FDD2 /* Film.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Film.h; sourceTree = "<group>"; };
+		3034699A26BB51AF00B3FDD2 /* Film.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Film.m; sourceTree = "<group>"; };
+		3058E65C26BCA1EF009DE75A /* ServiceLocator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceLocator.h; sourceTree = "<group>"; };
+		3058E65D26BCA1EF009DE75A /* ServiceLocator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceLocator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +128,13 @@
 				3034697126BB441800B3FDD2 /* Info.plist */,
 				3034697226BB441800B3FDD2 /* main.m */,
 				3034696926BB441500B3FDD2 /* WarStarsBrowser.xcdatamodeld */,
+				3034699526BB45D300B3FDD2 /* NetworkService.h */,
+				3034699626BB4D9B00B3FDD2 /* NSURLSessionService.h */,
+				3034699726BB4D9B00B3FDD2 /* NSURLSessionService.m */,
+				3034699926BB51AF00B3FDD2 /* Film.h */,
+				3034699A26BB51AF00B3FDD2 /* Film.m */,
+				3058E65C26BCA1EF009DE75A /* ServiceLocator.h */,
+				3058E65D26BCA1EF009DE75A /* ServiceLocator.m */,
 			);
 			path = WarStarsBrowser;
 			sourceTree = "<group>";
@@ -269,11 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3058E65E26BCA1EF009DE75A /* ServiceLocator.m in Sources */,
 				3034697326BB441800B3FDD2 /* main.m in Sources */,
 				3034696526BB441500B3FDD2 /* ViewController.m in Sources */,
 				3034695F26BB441500B3FDD2 /* AppDelegate.m in Sources */,
 				3034696226BB441500B3FDD2 /* SceneDelegate.m in Sources */,
 				3034696B26BB441500B3FDD2 /* WarStarsBrowser.xcdatamodeld in Sources */,
+				3034699826BB4D9B00B3FDD2 /* NSURLSessionService.m in Sources */,
+				3034699B26BB51AF00B3FDD2 /* Film.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
