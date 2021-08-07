@@ -13,6 +13,7 @@
 #import "ServiceLocator.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) id <NetworkService> netService;
 @end
 
@@ -27,10 +28,12 @@
 }
 
 - (void) loadFilms {
+    [self.activityIndicator startAnimating];
     [[ServiceLocator getNetworkService]  fetchFilms:^(NSArray<Film*> *newFilms, NSError* error ) {
         if(error) {
             
             dispatch_async(dispatch_get_main_queue(), ^{
+                [self.activityIndicator stopAnimating];
                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error Fetching Films" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
 
                 UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -44,11 +47,13 @@
             self.films = newFilms;
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadData];
+                [self.activityIndicator stopAnimating];
             });
             
             [self saveFilms];
         }
     }];
+    
 }
 
 - (void) saveFilms {
