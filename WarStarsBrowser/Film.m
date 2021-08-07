@@ -9,11 +9,18 @@
 
 @implementation Film
 
-+ (Film *) buildPersonFromDict:(NSDictionary*) dict {
++ (Film *) buildFilmFromDict:(NSDictionary*) dict {
 
     Film* film = [[Film alloc] init];
+    film.episodeId = [dict[@"episode_id"] intValue];
     film.director   = dict[@"director"] ?: @"";
     film.title      = dict[@"title"] ?: @"";
+    film.crawlString = dict[@"opening_crawl"] ?: @"";
+    
+    NSString *dateString = dict[@"release_date"];
+    NSDateFormatter* dateformat = [[NSDateFormatter alloc]init];
+    [dateformat setDateFormat:@"yyyy-MM-dd"];
+    film.releaseDate = [dateformat dateFromString: dateString];
     
     return film;
 }

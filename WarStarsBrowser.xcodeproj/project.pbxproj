@@ -11,7 +11,6 @@
 		3034696226BB441500B3FDD2 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3034696126BB441500B3FDD2 /* SceneDelegate.m */; };
 		3034696526BB441500B3FDD2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3034696426BB441500B3FDD2 /* ViewController.m */; };
 		3034696826BB441500B3FDD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3034696626BB441500B3FDD2 /* Main.storyboard */; };
-		3034696B26BB441500B3FDD2 /* WarStarsBrowser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3034696926BB441500B3FDD2 /* WarStarsBrowser.xcdatamodeld */; };
 		3034696D26BB441800B3FDD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3034696C26BB441800B3FDD2 /* Assets.xcassets */; };
 		3034697026BB441800B3FDD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3034696E26BB441800B3FDD2 /* LaunchScreen.storyboard */; };
 		3034697326BB441800B3FDD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3034697226BB441800B3FDD2 /* main.m */; };
@@ -20,6 +19,12 @@
 		3034699826BB4D9B00B3FDD2 /* NSURLSessionService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3034699726BB4D9B00B3FDD2 /* NSURLSessionService.m */; };
 		3034699B26BB51AF00B3FDD2 /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = 3034699A26BB51AF00B3FDD2 /* Film.m */; };
 		3058E65E26BCA1EF009DE75A /* ServiceLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3058E65D26BCA1EF009DE75A /* ServiceLocator.m */; };
+		3058E66126BDDA4C009DE75A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3058E66026BDDA4C009DE75A /* DetailViewController.m */; };
+		3058E66926BDF475009DE75A /* StarJedi-DGRW.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3058E66626BDF475009DE75A /* StarJedi-DGRW.ttf */; };
+		3058E66A26BDF475009DE75A /* StarJediHollow-A4lL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3058E66726BDF475009DE75A /* StarJediHollow-A4lL.ttf */; };
+		3058E66B26BDF475009DE75A /* StarJediRounded-jW3R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3058E66826BDF475009DE75A /* StarJediRounded-jW3R.ttf */; };
+		3058E69226BE8839009DE75A /* CoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3058E69126BE8839009DE75A /* CoreDataService.m */; };
+		3058E69326BE8DBF009DE75A /* WarStarsBrowser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3034696926BB441500B3FDD2 /* WarStarsBrowser.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,14 @@
 		3034699A26BB51AF00B3FDD2 /* Film.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Film.m; sourceTree = "<group>"; };
 		3058E65C26BCA1EF009DE75A /* ServiceLocator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceLocator.h; sourceTree = "<group>"; };
 		3058E65D26BCA1EF009DE75A /* ServiceLocator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceLocator.m; sourceTree = "<group>"; };
+		3058E65F26BDDA4C009DE75A /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		3058E66026BDDA4C009DE75A /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		3058E66626BDF475009DE75A /* StarJedi-DGRW.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "StarJedi-DGRW.ttf"; sourceTree = "<group>"; };
+		3058E66726BDF475009DE75A /* StarJediHollow-A4lL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "StarJediHollow-A4lL.ttf"; sourceTree = "<group>"; };
+		3058E66826BDF475009DE75A /* StarJediRounded-jW3R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "StarJediRounded-jW3R.ttf"; sourceTree = "<group>"; };
+		3058E68F26BE8739009DE75A /* PersistenceService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersistenceService.h; sourceTree = "<group>"; };
+		3058E69026BE8839009DE75A /* CoreDataService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataService.h; sourceTree = "<group>"; };
+		3058E69126BE8839009DE75A /* CoreDataService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +129,7 @@
 		3034695C26BB441500B3FDD2 /* WarStarsBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				3058E66226BDF0EF009DE75A /* Fonts */,
 				3034695D26BB441500B3FDD2 /* AppDelegate.h */,
 				3034695E26BB441500B3FDD2 /* AppDelegate.m */,
 				3034696026BB441500B3FDD2 /* SceneDelegate.h */,
@@ -135,6 +149,11 @@
 				3034699A26BB51AF00B3FDD2 /* Film.m */,
 				3058E65C26BCA1EF009DE75A /* ServiceLocator.h */,
 				3058E65D26BCA1EF009DE75A /* ServiceLocator.m */,
+				3058E65F26BDDA4C009DE75A /* DetailViewController.h */,
+				3058E66026BDDA4C009DE75A /* DetailViewController.m */,
+				3058E68F26BE8739009DE75A /* PersistenceService.h */,
+				3058E69026BE8839009DE75A /* CoreDataService.h */,
+				3058E69126BE8839009DE75A /* CoreDataService.m */,
 			);
 			path = WarStarsBrowser;
 			sourceTree = "<group>";
@@ -155,6 +174,16 @@
 				3034698926BB441900B3FDD2 /* Info.plist */,
 			);
 			path = WarStarsBrowserUITests;
+			sourceTree = "<group>";
+		};
+		3058E66226BDF0EF009DE75A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3058E66626BDF475009DE75A /* StarJedi-DGRW.ttf */,
+				3058E66726BDF475009DE75A /* StarJediHollow-A4lL.ttf */,
+				3058E66826BDF475009DE75A /* StarJediRounded-jW3R.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +288,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3058E66926BDF475009DE75A /* StarJedi-DGRW.ttf in Resources */,
 				3034697026BB441800B3FDD2 /* LaunchScreen.storyboard in Resources */,
 				3034696D26BB441800B3FDD2 /* Assets.xcassets in Resources */,
 				3034696826BB441500B3FDD2 /* Main.storyboard in Resources */,
+				3058E66B26BDF475009DE75A /* StarJediRounded-jW3R.ttf in Resources */,
+				3058E66A26BDF475009DE75A /* StarJediHollow-A4lL.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,12 +318,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3058E69326BE8DBF009DE75A /* WarStarsBrowser.xcdatamodeld in Sources */,
 				3058E65E26BCA1EF009DE75A /* ServiceLocator.m in Sources */,
 				3034697326BB441800B3FDD2 /* main.m in Sources */,
+				3058E69226BE8839009DE75A /* CoreDataService.m in Sources */,
+				3058E66126BDDA4C009DE75A /* DetailViewController.m in Sources */,
 				3034696526BB441500B3FDD2 /* ViewController.m in Sources */,
 				3034695F26BB441500B3FDD2 /* AppDelegate.m in Sources */,
 				3034696226BB441500B3FDD2 /* SceneDelegate.m in Sources */,
-				3034696B26BB441500B3FDD2 /* WarStarsBrowser.xcdatamodeld in Sources */,
 				3034699826BB4D9B00B3FDD2 /* NSURLSessionService.m in Sources */,
 				3034699B26BB51AF00B3FDD2 /* Film.m in Sources */,
 			);

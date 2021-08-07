@@ -8,6 +8,7 @@
 #import "ServiceLocator.h"
 
 #import "NSURLSessionService.h"
+#import "CoreDataService.h"
 
 @implementation ServiceLocator
 
@@ -19,6 +20,16 @@
     });
     
     return sharedNetworkService;
+}
+
++ (id<PersistenceService>) getPersistenceService {
+    static CoreDataService *sharedPersistenceService = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedPersistenceService = [[CoreDataService alloc] init];
+    });
+    
+    return sharedPersistenceService;
 }
 
 @end

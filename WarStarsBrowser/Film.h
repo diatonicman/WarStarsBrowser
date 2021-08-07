@@ -11,11 +11,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Film : NSObject
 
-@property (nonatomic) NSString* title;
-@property (nonatomic) NSString* director;
+@property (nonatomic) int episodeId;
+@property (nonatomic) NSString *title;
+@property (nonatomic) NSString *director;
 @property (nonatomic) NSDate *releaseDate;
+@property (nonatomic) NSString *crawlString;
 
-+ (Film*) buildPersonFromDict:(NSDictionary*) dict;
++ (Film*) buildFilmFromDict:(NSDictionary*) dict;
 
 @end
 

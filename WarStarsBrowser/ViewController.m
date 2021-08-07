@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 
+#import "DetailViewController.h"
 #import "NetworkService.h"
 #import "NSURLSessionService.h"
 #import "ServiceLocator.h"
@@ -21,6 +22,7 @@
     [super viewDidLoad];
     
     self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     [self loadFilms];
 }
 
@@ -43,8 +45,29 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadData];
             });
+            
+            [self saveFilms];
         }
     }];
+}
+
+- (void) saveFilms {
+    NSError *error = nil;
+    
+    [[ServiceLocator getPersistenceService] createOrUpdateFilms:self.films error:error];
+    if(error) {
+            
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error Saving Films" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+
+            UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                        //button click event
+                    }];
+                
+            [alert addAction:ok];
+            [self presentViewController:alert animated:YES completion:nil];
+            });
+    }
 }
 
 #pragma mark - Table View Data source
@@ -74,5 +97,19 @@
 }
 
 #pragma mark - Table View Delegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"DetailSegue" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"DetailSegue"])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        DetailViewController *detailController = segue.destinationViewController;
+        detailController.film = [self.films objectAtIndex:indexPath.row];
+    }
+}
 
 @end

@@ -55,6 +55,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Fonts/StarJedi-DGRW.ttf</string>
+		<string>Fonts/StarJediHollow-A4IL.ttf</string>
+		<string>Fonts/StarJediRounded-jW3R.ttf</string>
+	</array>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

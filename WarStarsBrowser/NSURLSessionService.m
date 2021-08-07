@@ -27,7 +27,6 @@
             
             //Try to handle the JSON differences between swapi.dev and swapi.tech
             NSArray *filmArray;
-            
             if(responseDictionary[@"results"]) {
                 filmArray = responseDictionary[@"results"];
             } else if(responseDictionary[@"result"]) {
@@ -37,9 +36,9 @@
             for (NSDictionary *filmDict in filmArray) {
                 //Check for the properties field if it's there then it's swapi.tech
                 if(filmDict[@"properties"]) {
-                    [newFilms addObject:[Film buildPersonFromDict:filmDict[@"properties"]]];
+                    [newFilms addObject:[Film buildFilmFromDict:filmDict[@"properties"]]];
                 } else {
-                    [newFilms addObject:[Film buildPersonFromDict:filmDict]];
+                    [newFilms addObject:[Film buildFilmFromDict:filmDict]];
                 }
             }
             fetcherCallback(newFilms, nil);

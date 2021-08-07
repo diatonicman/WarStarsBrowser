@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="StarJediRounded-jW3R.ttf">
+            <string>StarJediRounded</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -17,14 +22,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-wars-main" translatesAutoresizingMaskIntoConstraints="NO" id="syE-8E-sPI">
-                                <rect key="frame" x="0.0" y="44" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="VJh-5n-Bvt"/>
                                     <constraint firstAttribute="height" constant="100" id="yxy-Jy-Iew"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jm8-T4-9CH">
-                                <rect key="frame" x="0.0" y="194" width="414" height="668"/>
+                                <rect key="frame" x="0.0" y="214" width="414" height="648"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -34,7 +39,7 @@
                             <constraint firstItem="syE-8E-sPI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Qkf-za-8sI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jm8-T4-9CH" secondAttribute="bottom" id="Vrk-cc-tnL"/>
                             <constraint firstItem="jm8-T4-9CH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YH8-7W-wI0"/>
-                            <constraint firstItem="syE-8E-sPI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="n9k-GM-Eno"/>
+                            <constraint firstItem="syE-8E-sPI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="n9k-GM-Eno"/>
                             <constraint firstItem="jm8-T4-9CH" firstAttribute="top" secondItem="syE-8E-sPI" secondAttribute="bottom" constant="50" id="q1C-hR-UGB"/>
                             <constraint firstItem="syE-8E-sPI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="siJ-r8-qoD"/>
                             <constraint firstItem="jm8-T4-9CH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vYo-8H-kvy"/>
@@ -42,15 +47,87 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="jm8-T4-9CH" id="Fwr-Mh-0Rb"/>
+                        <segue destination="Noc-xK-p2y" kind="show" identifier="DetailSegue" id="ZNz-v4-4cD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="45" y="82"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="fPB-UF-X2y">
+            <objects>
+                <viewController id="Noc-xK-p2y" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yg8-yX-8Gg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXK-hE-e8m">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="pG5-py-L3m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StarJediRounded" family="Star Jedi Rounded" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csQ-6n-hzh">
+                                <rect key="frame" x="5" y="135" width="414" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wy6-E1-nCt">
+                                <rect key="frame" x="5" y="171.5" width="404" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8fv-55-fTs">
+                                <rect key="frame" x="50" y="217.5" width="359" height="585.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tno-am-QAy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wy6-E1-nCt" firstAttribute="leading" secondItem="tno-am-QAy" secondAttribute="leading" constant="5" id="1LX-3a-slN"/>
+                            <constraint firstItem="tno-am-QAy" firstAttribute="trailing" secondItem="Wy6-E1-nCt" secondAttribute="trailing" constant="5" id="4mM-M6-84V"/>
+                            <constraint firstItem="dXK-hE-e8m" firstAttribute="leading" secondItem="tno-am-QAy" secondAttribute="leading" id="Dk1-ch-6WE"/>
+                            <constraint firstItem="dXK-hE-e8m" firstAttribute="top" secondItem="tno-am-QAy" secondAttribute="top" id="GyG-qj-LPV"/>
+                            <constraint firstItem="csQ-6n-hzh" firstAttribute="top" secondItem="dXK-hE-e8m" secondAttribute="bottom" constant="35" id="NQA-Aj-Dbu"/>
+                            <constraint firstItem="8fv-55-fTs" firstAttribute="top" secondItem="Wy6-E1-nCt" secondAttribute="bottom" constant="25" id="SCM-TI-ylf"/>
+                            <constraint firstItem="csQ-6n-hzh" firstAttribute="leading" secondItem="tno-am-QAy" secondAttribute="leading" constant="5" id="SFQ-gW-fXj"/>
+                            <constraint firstItem="dXK-hE-e8m" firstAttribute="trailing" secondItem="tno-am-QAy" secondAttribute="trailing" id="V7D-Jv-Lkb"/>
+                            <constraint firstItem="tno-am-QAy" firstAttribute="bottom" secondItem="8fv-55-fTs" secondAttribute="bottom" constant="5" id="VjC-QJ-zXG"/>
+                            <constraint firstItem="Wy6-E1-nCt" firstAttribute="top" secondItem="csQ-6n-hzh" secondAttribute="bottom" constant="10" id="gH7-gc-TVd"/>
+                            <constraint firstItem="8fv-55-fTs" firstAttribute="leading" secondItem="tno-am-QAy" secondAttribute="leading" constant="50" id="hiM-PX-0RW"/>
+                            <constraint firstItem="tno-am-QAy" firstAttribute="trailing" secondItem="8fv-55-fTs" secondAttribute="trailing" constant="5" id="sJX-Me-vlQ"/>
+                            <constraint firstItem="csQ-6n-hzh" firstAttribute="trailing" secondItem="tno-am-QAy" secondAttribute="trailing" constant="5" id="zFv-EL-6FK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FPT-Ic-DWv"/>
+                    <connections>
+                        <outlet property="crawlText" destination="8fv-55-fTs" id="SV8-Oy-DYw"/>
+                        <outlet property="directorLabel" destination="csQ-6n-hzh" id="8qM-rp-9Dq"/>
+                        <outlet property="releaseDateLabel" destination="Wy6-E1-nCt" id="g3c-Eg-xaB"/>
+                        <outlet property="titleLabel" destination="dXK-hE-e8m" id="Muc-YU-Kk0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KVn-Zq-k7r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="714.49275362318849" y="81.696428571428569"/>
+        </scene>
     </scenes>
     <resources>
         <image name="star-wars-main" width="1837" height="789"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
