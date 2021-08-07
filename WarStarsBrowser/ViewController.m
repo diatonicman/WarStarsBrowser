@@ -56,17 +56,14 @@
     
     [[ServiceLocator getPersistenceService] createOrUpdateFilms:self.films error:error];
     if(error) {
-            
-        dispatch_async(dispatch_get_main_queue(), ^{
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error Saving Films" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error Saving Films" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
 
-            UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                        //button click event
-                    }];
+        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                //button click event
+            }];
                 
-            [alert addAction:ok];
-            [self presentViewController:alert animated:YES completion:nil];
-            });
+        [alert addAction:ok];
+        [self presentViewController:alert animated:YES completion:nil];
     }
 }
 
